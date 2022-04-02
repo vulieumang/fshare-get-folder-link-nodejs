@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fshare get folder</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container" style="margin-top:50px">
+    <form id="form" method="post" action="">
+      <div class="mb-3">
+        <h1>Fshare get fshare folder and sub folder - lay link file trong folder fshare</h1>
+        <label for="exampleInputEmail1" class="form-label">Link</label>
+        <input type="text" class="form-control" name="link" id="link" aria-describedby="emailHelp" value="https://www.fshare.vn/folder/C1SMHBSTE8PJ?token=1648889250" placeholder="https://www.fshare.vn/folder/R3QAU4SEDB6OMRP?token=1648889250">
+        <div id="emailHelp" class="form-text">ex: https://www.fshare.vn/folder/R3QAU4SEDB6OMRP?token=1621851608</div>
+      </div>
+      <button type="submit"  class="btn btn-primary">Submit</button>
+    </form>
+    <img id="loading" width="30px" style="display:none" src="loading.gif" alt="" srcset="">
+    <% if (typeof listItem == 'object' && listItem.length > 0) { %>
+
+      Raw
+      <div id="output-raw" class="mb-3">
+        <textarea class="form-text" name="" id="res" cols="" style="
+        width: 100%;
+    " rows="10"><% for (var i = 0; i < listItem.length; i++) { %>https://www.fshare.vn/file/<%- listItem[i].code %>
+  <% } %></textarea>
+      </div>
+      Link
+      <div id="output-link"  class="mb-3">
+       <% for (var i = 0; i < listItem.length; i++) { %>
+        <a href="https://www.fshare.vn/file/<%- listItem[i].code %>">https://www.fshare.vn/file/<%- listItem[i].code %></a> - <%- listItem[i].name %> </br>
+        <% } %>
+      </div>
+     
+     <% } %>
+
+   
+    
+  </div>
+
+  <footer style="margin-bottom:100px"></footer>
+  <script src="script.js"></script>
+</body>
+</html>
