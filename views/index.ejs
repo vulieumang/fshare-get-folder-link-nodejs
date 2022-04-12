@@ -28,13 +28,13 @@
       <div id="output-raw" class="mb-3">
         <textarea class="form-text" name="" id="res" cols="" style="
         width: 100%;
-    " rows="10"><% for (var i = 0; i < listItem.length; i++) { %>https://www.fshare.vn/file/<%- listItem[i].code %>
+    " rows="10"><% for (var i = 0; i < listItem.length; i++) { %><%- listItem[i].link %>
   <% } %></textarea>
       </div>
       Link
       <div id="output-link"  class="mb-3">
        <% for (var i = 0; i < listItem.length; i++) { %>
-        <a href="https://www.fshare.vn/file/<%- listItem[i].code %>">https://www.fshare.vn/file/<%- listItem[i].code %></a> - <%- listItem[i].name %> </br>
+        <a href="<%- listItem[i].link %>"><%- listItem[i].link %></a> - <%- listItem[i].name %> </br>
         <% } %>
       </div>
      
