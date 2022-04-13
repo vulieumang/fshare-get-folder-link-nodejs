@@ -59,8 +59,8 @@ app.post('/', async (req, res) => {
   }
 })
 
-// const port = process.env.PORT || 3001;
-const port = 3003;
+const port = process.env.PORT || 3003;
+// const port = 3003;
 app.listen(port, function () {
   console.log('Server started at http://localhost:' + port);
 })
