@@ -16,6 +16,9 @@ app.set('view engine', 'ejs')
 app.get('/', (_, res) => res.render('index'))
 
 app.post('/', async (req, res) => {
+
+  // viet ham cho 1 nam sau nhin lai van hieu
+  
   // get code of url https://www.fshare.vn/folder/C1SMHBSTE8PJ?token=1648831373 => C1SMHBSTE8PJ
   const code_url = req.body.link.split('/')[4].split('?')[0]
  
